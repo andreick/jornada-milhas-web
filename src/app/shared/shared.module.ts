@@ -7,12 +7,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContainerComponent } from './container/container.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     BannerComponent,
-    ContainerComponent
+    ContainerComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { ContainerComponent } from './container/container.component';
     HeaderComponent,
     BannerComponent,
     ContainerComponent,
+    FooterComponent,
   ]
 })
 export class SharedModule { }
