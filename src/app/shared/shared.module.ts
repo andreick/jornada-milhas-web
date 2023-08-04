@@ -6,11 +6,13 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    BannerComponent
+    BannerComponent,
+    ContainerComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { BannerComponent } from './banner/banner.component';
   exports: [
     HeaderComponent,
     BannerComponent,
+    ContainerComponent,
   ]
 })
 export class SharedModule { }
