@@ -1,0 +1,15 @@
+.mat-toolbar {
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 0 10%;
+
+  nav {
+    display: flex;
+    gap: 16px;
+
+    .mat-stroked-button:not(:disabled) {
+      border-color: white;
+    }
+  }
+}
