@@ -5,10 +5,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 
 import { HeaderComponent } from './header/header.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,
@@ -17,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
   ],
   exports: [
     HeaderComponent,
+    BannerComponent,
   ]
 })
 export class SharedModule { }
