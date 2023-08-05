@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContainerComponent } from './container/container.component';
 import { FooterComponent } from './footer/footer.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
     BannerComponent,
     ContainerComponent,
     FooterComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
