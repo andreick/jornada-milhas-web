@@ -34,6 +34,10 @@
             "prefix": "app",
             "style": "kebab-case"
           }
+        ],
+        "max-len": [
+          "warn",
+          120
         ]
       }
     },
@@ -44,7 +48,12 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+        "max-len": [
+          "warn",
+          120
+        ]
+      }
     }
   ]
 }

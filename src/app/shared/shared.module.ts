@@ -11,6 +11,7 @@ import { ContainerComponent } from './container/container.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
 import { CardSearchComponent } from './card-search/card-search.component';
+import { CardTestimonialComponent } from './card-testimonial/card-testimonial.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CardSearchComponent } from './card-search/card-search.component';
     FooterComponent,
     CardComponent,
     CardSearchComponent,
+    CardTestimonialComponent,
   ],
   imports: [
     CommonModule,
@@ -28,12 +30,14 @@ import { CardSearchComponent } from './card-search/card-search.component';
     MatCardModule,
   ],
   exports: [
+    CommonModule,
     HeaderComponent,
     BannerComponent,
     ContainerComponent,
     FooterComponent,
     CardComponent,
     CardSearchComponent,
+    CardTestimonialComponent,
   ]
 })
 export class SharedModule { }

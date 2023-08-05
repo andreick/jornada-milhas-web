@@ -12,4 +12,16 @@
     <app-card-search></app-card-search>
     <app-card-search></app-card-search>
   </div>
+  <h2>Depoimentos</h2>
+  <div class="card-wrapper">
+    <div *ngFor="let testimonial of testimonials">
+      <app-card-testimonial
+        [src]="testimonial.src"
+        [alt]="testimonial.alt"
+        [text]="testimonial.text"
+        [authorship]="testimonial.authorship"
+      >
+      </app-card-testimonial>
+    </div>
+  </div>
 </app-container>
