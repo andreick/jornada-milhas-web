@@ -12,16 +12,44 @@
     .form-container {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin: 16px 0;
+      gap: 24px;
+      margin-top: 16px;
     }
 
     .input-container {
-      margin-bottom: -1.25em;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .input-field {
+        max-width: 240px;
+      }
+
+      .datepicker-field {
+        max-width: 155px;
+      }
+
+      .check-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+      }
+
+      .sync-alt-button {
+        width: 24px;
+      }
     }
 
-    .mat-button-toggle-checked {
-      background-color: #F7F2FA;
+    .search-button {
+      flex: 1 1 auto;
     }
   }
+}
+
+.mat-button-toggle-checked {
+  background-color: #F7F2FA;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0;
 }
