@@ -22,6 +22,7 @@ import { CardSearchComponent } from './card-search/card-search.component';
 import { CardTestimonialComponent } from './card-testimonial/card-testimonial.component';
 import { FormSearchComponent } from './form-search/form-search.component';
 import { ModalComponent } from './modal/modal.component';
+import { ButtonCounterComponent } from './button-counter/button-counter.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ModalComponent } from './modal/modal.component';
     CardTestimonialComponent,
     FormSearchComponent,
     ModalComponent,
+    ButtonCounterComponent,
   ],
   imports: [
     CommonModule,

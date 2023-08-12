@@ -5,40 +5,28 @@
       <div class="age-selection">
         <p><strong>Adultos</strong></p>
         <p>(Acima de 12 anos)</p>
-        <div class="quantity-container">
-          <button mat-mini-fab class="decrement">
-            <img src="assets/icones/do_not_disturb_on.png" alt="Operador de subtração">
-          </button>
+        <div class="count-container">
+          <app-button-counter operation="decrement"></app-button-counter>
           <p><span>1</span></p>
-          <button mat-mini-fab class="increment">
-            <img src="assets/icones/add_circle.png" alt="Operador de adição">
-          </button>
+          <app-button-counter operation="increment"></app-button-counter>
         </div>
       </div>
       <div class="age-selection">
         <strong>Crianças</strong>
         <p>(Entre 2 e 11 anos)</p>
-        <div class="quantity-container">
-          <button mat-mini-fab class="decrement">
-            <img src="assets/icones/do_not_disturb_on.png" alt="Operador de subtração">
-          </button>
-          <span>0</span>
-          <button mat-mini-fab class="increment">
-            <img src="assets/icones/add_circle.png" alt="Operador de adição">
-          </button>
+        <div class="count-container">
+          <app-button-counter operation="decrement"></app-button-counter>
+          <p><span>1</span></p>
+          <app-button-counter operation="increment"></app-button-counter>
         </div>
       </div>
       <div class="age-selection">
         <strong>Bebês</strong>
         <p>(Até 2 anos)</p>
-        <div class="quantity-container">
-          <button mat-mini-fab class="decrement">
-            <img src="assets/icones/do_not_disturb_on.png" alt="Operador de subtração">
-          </button>
-          <span>1</span>
-          <button mat-mini-fab class="increment">
-            <img src="assets/icones/add_circle.png" alt="Operador de adição">
-          </button>
+        <div class="count-container">
+          <app-button-counter operation="decrement"></app-button-counter>
+          <p><span>1</span></p>
+          <app-button-counter operation="increment"></app-button-counter>
         </div>
       </div>
     </div>
