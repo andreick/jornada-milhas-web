@@ -1,0 +1,90 @@
+::ng-deep .mat-dialog-container {
+  border: 1px solid #1D1B20;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: 24px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1D1B20;
+    margin: 0px;
+  }
+
+  .age-selection-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+
+    .age-selection {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .quantity-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 4px;
+
+        .decrement {
+          background-color: #E5E4E2;
+        }
+
+        .increment {
+          background-color: #E8DEF8;
+        }
+      }
+    }
+  }
+
+  .category-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 24px;
+
+    .chip {
+      background-color: white;
+      color: #C0C0C0;
+      border: 1px solid #E5E4E2;
+    }
+
+    .chip.mat-chip-selected {
+      background-color: #E8DEF8;
+      color: #1D1B20;
+      border: 1px solid #1D1B20;
+    }
+
+    .icon-sm {
+      margin-right: 12px;
+    }
+  }
+
+  .modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    button {
+      flex: 1 1 auto;
+      font-size: 16px;
+      line-height: 36px;
+    }
+
+    .cancel-button {
+      background-color: #E8DEF8;
+    }
+  }
+}

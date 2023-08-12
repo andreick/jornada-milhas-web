@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MatDialog } from '@angular/material/dialog';
+
+import { ModalComponent } from 'src/app/shared/modal/modal.component';
+
 @Component({
   selector: 'app-form-search',
   templateUrl: './form-search.component.html',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog() {
+    this.dialog.open(ModalComponent, { width: '50%' });
   }
 
 }

@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
@@ -20,6 +21,7 @@ import { CardComponent } from './card/card.component';
 import { CardSearchComponent } from './card-search/card-search.component';
 import { CardTestimonialComponent } from './card-testimonial/card-testimonial.component';
 import { FormSearchComponent } from './form-search/form-search.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { FormSearchComponent } from './form-search/form-search.component';
     CardSearchComponent,
     CardTestimonialComponent,
     FormSearchComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +47,7 @@ import { FormSearchComponent } from './form-search/form-search.component';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatDialogModule,
   ],
   exports: [
     CommonModule,
