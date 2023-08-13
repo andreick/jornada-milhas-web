@@ -5,13 +5,10 @@
 <app-container>
   <app-form-search></app-form-search>
   <h2>Promoções</h2>
-  <div class="card-wrapper">
-    <app-card-search></app-card-search>
-    <app-card-search></app-card-search>
-    <app-card-search></app-card-search>
-    <app-card-search></app-card-search>
-    <app-card-search></app-card-search>
-    <app-card-search></app-card-search>
+  <div class="card-wrapper" *ngIf="promocoes$ | async as promocoes">
+    <div *ngFor="let promocao of promocoes">
+      <app-card-promocao [promocao]="promocao"></app-card-promocao>
+    </div>
   </div>
   <h2>Depoimentos</h2>
   <div class="card-wrapper">

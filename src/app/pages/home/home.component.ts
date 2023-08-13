@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { PromocaoService } from 'src/app/core/services/promocao.service';
+import { Promocao } from 'src/app/core/models/promocao';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,8 @@ import { PromocaoService } from 'src/app/core/services/promocao.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  promocoes$!: Observable<Promocao[]>;
 
   testimonials = [
     {
@@ -41,7 +45,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.promocaoService.fetch().subscribe();
+    this.promocoes$ = this.promocaoService.fetch();
   }
 
 }

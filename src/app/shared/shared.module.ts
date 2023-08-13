@@ -18,7 +18,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ContainerComponent } from './container/container.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
-import { CardSearchComponent } from './card-search/card-search.component';
+import { CardPromocaoComponent } from './card-promocao/card-promocao.component';
 import { CardTestimonialComponent } from './card-testimonial/card-testimonial.component';
 import { FormSearchComponent } from './form-search/form-search.component';
 import { ModalComponent } from './modal/modal.component';
@@ -31,7 +31,7 @@ import { ButtonCounterComponent } from './button-counter/button-counter.componen
     ContainerComponent,
     FooterComponent,
     CardComponent,
-    CardSearchComponent,
+    CardPromocaoComponent,
     CardTestimonialComponent,
     FormSearchComponent,
     ModalComponent,
@@ -58,7 +58,7 @@ import { ButtonCounterComponent } from './button-counter/button-counter.componen
     ContainerComponent,
     FooterComponent,
     CardComponent,
-    CardSearchComponent,
+    CardPromocaoComponent,
     CardTestimonialComponent,
     FormSearchComponent,
   ]

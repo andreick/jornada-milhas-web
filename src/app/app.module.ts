@@ -8,6 +8,11 @@ import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt, 'pt');
+
 @NgModule({
   declarations: [
     AppComponent
