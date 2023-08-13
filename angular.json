@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jornada-milhas": {
+    "jornada-milhas-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jornada-milhas",
+            "outputPath": "dist/jornada-milhas-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "jornada-milhas:build:production"
+              "browserTarget": "jornada-milhas-web:build:production"
             },
             "development": {
-              "browserTarget": "jornada-milhas:build:development"
+              "browserTarget": "jornada-milhas-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jornada-milhas:build"
+            "browserTarget": "jornada-milhas-web:build"
           }
         },
         "test": {
