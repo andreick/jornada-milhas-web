@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { MatDialog } from '@angular/material/dialog';
 
+import { FormPassagemService } from 'src/app/core/services/form-passagem.service';
+
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
 
 @Component({
@@ -11,7 +13,10 @@ import { ModalComponent } from 'src/app/shared/modal/modal.component';
 })
 export class FormPassagemComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public formPassagemService: FormPassagemService,
+    private dialog: MatDialog,
+  ) { }
 
   ngOnInit(): void {
   }
