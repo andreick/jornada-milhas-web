@@ -20,7 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
 import { CardPromocaoComponent } from './card-promocao/card-promocao.component';
 import { CardTestimonialComponent } from './card-testimonial/card-testimonial.component';
-import { FormSearchComponent } from './form-search/form-search.component';
+import { FormPassagemComponent } from './form-passagem/form-passagem.component';
 import { ModalComponent } from './modal/modal.component';
 import { ButtonCounterComponent } from './button-counter/button-counter.component';
 
@@ -33,7 +33,7 @@ import { ButtonCounterComponent } from './button-counter/button-counter.componen
     CardComponent,
     CardPromocaoComponent,
     CardTestimonialComponent,
-    FormSearchComponent,
+    FormPassagemComponent,
     ModalComponent,
     ButtonCounterComponent,
   ],
@@ -60,7 +60,7 @@ import { ButtonCounterComponent } from './button-counter/button-counter.componen
     CardComponent,
     CardPromocaoComponent,
     CardTestimonialComponent,
-    FormSearchComponent,
+    FormPassagemComponent,
   ]
 })
 export class SharedModule { }

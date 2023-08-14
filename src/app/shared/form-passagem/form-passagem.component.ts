@@ -5,11 +5,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
 
 @Component({
-  selector: 'app-form-search',
-  templateUrl: './form-search.component.html',
-  styleUrls: ['./form-search.component.scss']
+  selector: 'app-form-passagem',
+  templateUrl: './form-passagem.component.html',
+  styleUrls: ['./form-passagem.component.scss']
 })
-export class FormSearchComponent implements OnInit {
+export class FormPassagemComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
