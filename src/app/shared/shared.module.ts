@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
@@ -24,6 +25,7 @@ import { CardTestimonialComponent } from './card-testimonial/card-testimonial.co
 import { FormPassagemComponent } from './form-passagem/form-passagem.component';
 import { ModalComponent } from './modal/modal.component';
 import { ButtonCounterComponent } from './button-counter/button-counter.component';
+import { DropdownEstadoComponent } from './dropdown-estado/dropdown-estado.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { ButtonCounterComponent } from './button-counter/button-counter.componen
     FormPassagemComponent,
     ModalComponent,
     ButtonCounterComponent,
+    DropdownEstadoComponent,
   ],
   imports: [
     CommonModule,
@@ -52,6 +55,7 @@ import { ButtonCounterComponent } from './button-counter/button-counter.componen
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
+    MatAutocompleteModule,
   ],
   exports: [
     CommonModule,

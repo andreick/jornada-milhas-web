@@ -1,0 +1,20 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{ label }}</mat-label>
+  <mat-icon matPrefix [fontIcon]="matPrefix"></mat-icon>
+  <input
+    matInput
+    type="text"
+    aria-label="Dropdown de estados"
+    [formControl]="estadoCtrl"
+    [matAutocomplete]="auto"
+  >
+  <mat-icon matSuffix>search</mat-icon>
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    [displayWith]="nomeEstado"
+  >
+    <mat-option *ngFor="let estado of estadosFiltrados$ | async" [value]="estado">
+      {{ estado.nome }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
