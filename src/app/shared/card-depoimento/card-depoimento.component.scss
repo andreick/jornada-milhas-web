@@ -1,0 +1,32 @@
+.card {
+  box-sizing: border-box;
+  max-width: 320px;
+  height: 100%;
+  background-color: #FEF7FF;
+  border: none;
+  box-shadow: none;
+
+  img {
+    max-width: 56px;
+    max-height: 56px;
+  }
+
+  .card-content {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+
+    .card-content-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

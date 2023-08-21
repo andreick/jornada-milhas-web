@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { PromocaoService } from 'src/app/core/services/promocao.service';
+import { DepoimentoService } from 'src/app/core/services/depoimento.service';
 import { Promocao } from 'src/app/core/models/promocao';
+import { Depoimento } from 'src/app/core/models/depoimento';
 
 @Component({
   selector: 'app-home',
@@ -12,40 +14,16 @@ import { Promocao } from 'src/app/core/models/promocao';
 export class HomeComponent implements OnInit {
 
   promocoes$!: Observable<Promocao[]>;
-
-  testimonials = [
-    {
-      src: 'assets/imagens/avatar3.png',
-      alt: 'Imagem do autor',
-      text:
-        `Minha viagem com a Jornada foi incrível! Recomendo muito a agência para quem busca uma experiência
-         emocionante e personalizada a partir das nossas necessidades.`,
-      authorship: 'Mariana Faustino',
-    },
-    {
-      src: 'assets/imagens/avatar3.png',
-      alt: 'Imagem do autor',
-      text:
-        `Minha viagem com a Jornada foi incrível! Recomendo muito a agência para quem busca uma experiência
-         emocionante e personalizada a partir das nossas necessidades.`,
-      authorship: 'Mariana Faustino',
-    },
-    {
-      src: 'assets/imagens/avatar3.png',
-      alt: 'Imagem do autor',
-      text:
-        `Minha viagem com a Jornada foi incrível! Recomendo muito a agência para quem busca uma experiência
-         emocionante e personalizada a partir das nossas necessidades.`,
-      authorship: 'Mariana Faustino',
-    },
-  ];
+  depoimentos$!: Observable<Depoimento[]>;
 
   constructor(
     private promocaoService: PromocaoService,
+    private depoimentoService: DepoimentoService,
   ) { }
 
   ngOnInit(): void {
     this.promocoes$ = this.promocaoService.fetch();
+    this.depoimentos$ = this.depoimentoService.fetch();
   }
 
 }

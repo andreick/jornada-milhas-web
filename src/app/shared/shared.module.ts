@@ -21,7 +21,7 @@ import { ContainerComponent } from './container/container.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
 import { CardPromocaoComponent } from './card-promocao/card-promocao.component';
-import { CardTestimonialComponent } from './card-testimonial/card-testimonial.component';
+import { CardDepoimentoComponent } from './card-depoimento/card-depoimento.component';
 import { FormPassagemComponent } from './form-passagem/form-passagem.component';
 import { ModalComponent } from './modal/modal.component';
 import { ButtonCounterComponent } from './button-counter/button-counter.component';
@@ -35,7 +35,7 @@ import { DropdownEstadoComponent } from './dropdown-estado/dropdown-estado.compo
     FooterComponent,
     CardComponent,
     CardPromocaoComponent,
-    CardTestimonialComponent,
+    CardDepoimentoComponent,
     FormPassagemComponent,
     ModalComponent,
     ButtonCounterComponent,
@@ -65,7 +65,7 @@ import { DropdownEstadoComponent } from './dropdown-estado/dropdown-estado.compo
     FooterComponent,
     CardComponent,
     CardPromocaoComponent,
-    CardTestimonialComponent,
+    CardDepoimentoComponent,
     FormPassagemComponent,
   ]
 })

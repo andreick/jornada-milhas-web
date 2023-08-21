@@ -5,21 +5,15 @@
 <app-container>
   <app-form-passagem></app-form-passagem>
   <h2>Promoções</h2>
-  <div class="card-wrapper" *ngIf="promocoes$ | async as promocoes">
-    <div *ngFor="let promocao of promocoes">
+  <div class="card-wrapper">
+    <div *ngFor="let promocao of promocoes$ | async">
       <app-card-promocao [promocao]="promocao"></app-card-promocao>
     </div>
   </div>
   <h2>Depoimentos</h2>
   <div class="card-wrapper">
-    <div *ngFor="let testimonial of testimonials">
-      <app-card-testimonial
-        [src]="testimonial.src"
-        [alt]="testimonial.alt"
-        [text]="testimonial.text"
-        [authorship]="testimonial.authorship"
-      >
-      </app-card-testimonial>
+    <div *ngFor="let depoimento of depoimentos$ | async">
+      <app-card-depoimento [depoimento]="depoimento"></app-card-depoimento>
     </div>
   </div>
 </app-container>
