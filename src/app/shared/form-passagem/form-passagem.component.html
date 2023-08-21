@@ -8,25 +8,39 @@
           formControlName="somenteIda"
         >
           <mat-button-toggle [value]="false">
-            <mat-icon
-              class="icon-sm"
-              fontIcon="check"
-              *ngIf="!formPassagemService.somenteIda.value"
-            ></mat-icon>
-            IDA E VOLTA
+            <div class="icon-label-container">
+              <mat-icon
+                class="icon-sm"
+                fontIcon="check"
+                *ngIf="!formPassagemService.somenteIda.value"
+              ></mat-icon>
+              IDA E VOLTA
+            </div>
           </mat-button-toggle>
           <mat-button-toggle [value]="true">
-            <mat-icon
-              class="icon-sm"
-              fontIcon="check"
-              *ngIf="formPassagemService.somenteIda.value"
-            ></mat-icon>
-            SOMENTE IDA
+            <div class="icon-label-container">
+              <mat-icon
+                class="icon-sm"
+                fontIcon="check"
+                *ngIf="formPassagemService.somenteIda.value"
+              ></mat-icon>
+              SOMENTE IDA
+            </div>
           </mat-button-toggle>
         </mat-button-toggle-group>
-        <mat-chip-list aria-label="Seleção de passagens" (click)="openDialog()">
-          <mat-chip selected>1 Adulto</mat-chip>
-          <mat-chip>Econômica</mat-chip>
+        <mat-chip-list aria-label="Seleção de passagens">
+          <mat-chip (click)="formPassagemService.openDialog()">
+            <div class="icon-label-container">
+              <mat-icon class="icon-sm">check</mat-icon>
+              1 Adulto
+            </div>
+          </mat-chip>
+          <mat-chip (click)="formPassagemService.openDialog()">
+            <div class="icon-label-container">
+              <mat-icon class="icon-sm">check</mat-icon>
+              Econômica
+            </div>
+          </mat-chip>
         </mat-chip-list>
       </div>
     </div>
