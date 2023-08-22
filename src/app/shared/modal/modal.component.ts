@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FormPassagemService } from 'src/app/core/services/form-passagem.service';
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public formPassagemService: FormPassagemService,
+  ) { }
 
   ngOnInit(): void {
   }

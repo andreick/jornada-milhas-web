@@ -33,13 +33,19 @@
     <div class="category-selection">
       <p><strong>Categoria</strong></p>
       <mat-chip-list aria-label="Seleção de categoria">
-        <mat-chip selected>
+        <mat-chip
+          [selected]="formPassagemService.categoria.value === 'economica'"
+          (click)="formPassagemService.categoriaSelected('economica')"
+        >
           <div class="icon-label-container">
             <mat-icon class="icon-sm">check</mat-icon>
             Econômica
           </div>
         </mat-chip>
-        <mat-chip>
+        <mat-chip
+          [selected]="formPassagemService.categoria.value === 'executiva'"
+          (click)="formPassagemService.categoriaSelected('executiva')"
+        >
           <div class="icon-label-container">
             <mat-icon class="icon-sm">check</mat-icon>
             Executiva

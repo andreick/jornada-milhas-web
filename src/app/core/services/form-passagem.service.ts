@@ -16,6 +16,7 @@ export class FormPassagemService {
   readonly somenteIda: FormControl<boolean | null>;
   readonly origem: FormControl<string | Estado | null>;
   readonly destino: FormControl<string | Estado | null>;
+  readonly categoria: FormControl<'economica' | 'executiva' | null>;
 
   constructor(
     private dialog: MatDialog,
@@ -24,11 +25,16 @@ export class FormPassagemService {
       somenteIda: this.somenteIda = new FormControl(false),
       origem: this.origem = new FormControl(''),
       destino: this.destino = new FormControl(''),
+      categoria: this.categoria = new FormControl('executiva'),
     });
   }
 
   openDialog() {
     this.dialog.open(ModalComponent, { width: '50%' });
+  }
+
+  categoriaSelected(categoria: 'economica' | 'executiva'): void {
+    this.categoria.setValue(categoria);
   }
 
 }
