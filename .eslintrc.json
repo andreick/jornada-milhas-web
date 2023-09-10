@@ -15,6 +15,8 @@
         "createDefaultProgram": true
       },
       "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
@@ -35,9 +37,22 @@
             "style": "kebab-case"
           }
         ],
+        "@typescript-eslint/no-inferrable-types": [
+          "error",
+          {
+            "ignoreParameters": true,
+            "ignoreProperties": true
+          }
+        ],
         "max-len": [
           "warn",
           120
+        ],
+        "@typescript-eslint/no-empty-function": [
+          "warn"
+        ],
+        "@angular-eslint/no-empty-lifecycle-method": [
+          "off"
         ]
       }
     },

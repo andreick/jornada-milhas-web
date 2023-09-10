@@ -32,13 +32,13 @@
           <mat-chip (click)="formPassagemService.openDialog()">
             <div class="icon-label-container">
               <mat-icon class="icon-sm">check</mat-icon>
-              1 Adulto
+              {{ formPassagemService.descricaoPassageiros }}
             </div>
           </mat-chip>
           <mat-chip (click)="formPassagemService.openDialog()">
             <div class="icon-label-container">
               <mat-icon class="icon-sm">check</mat-icon>
-              Econômica
+              {{ formPassagemService.categoria.value }}
             </div>
           </mat-chip>
         </mat-chip-list>
