@@ -22,23 +22,10 @@
     margin: 0px;
   }
 
-  .age-selection-container {
+  .contador-passageiro-container {
     display: flex;
     justify-content: space-between;
     padding-bottom: 24px;
-
-    .age-selection {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-
-      .count-container {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        padding: 4px;
-      }
-    }
   }
 
   .category-selection {

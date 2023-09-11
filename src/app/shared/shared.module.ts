@@ -26,6 +26,7 @@ import { FormPassagemComponent } from './form-passagem/form-passagem.component';
 import { ModalComponent } from './modal/modal.component';
 import { ButtonCounterComponent } from './button-counter/button-counter.component';
 import { DropdownEstadoComponent } from './dropdown-estado/dropdown-estado.component';
+import { ContadorPassageiroComponent } from './contador-passageiro/contador-passageiro.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { DropdownEstadoComponent } from './dropdown-estado/dropdown-estado.compo
     ModalComponent,
     ButtonCounterComponent,
     DropdownEstadoComponent,
+    ContadorPassageiroComponent,
   ],
   imports: [
     CommonModule,
