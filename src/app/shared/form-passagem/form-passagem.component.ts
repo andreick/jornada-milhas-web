@@ -5,7 +5,10 @@ import { FormPassagemService } from 'src/app/core/services/form-passagem.service
 @Component({
   selector: 'app-form-passagem',
   templateUrl: './form-passagem.component.html',
-  styleUrls: ['./form-passagem.component.scss']
+  styleUrls: ['./form-passagem.component.scss'],
+  providers: [
+    FormPassagemService,
+  ]
 })
 export class FormPassagemComponent implements OnInit {
 
@@ -14,6 +17,10 @@ export class FormPassagemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  buscar(): void {
+    console.log(this.formPassagemService.formPassagem.value);
   }
 
 }

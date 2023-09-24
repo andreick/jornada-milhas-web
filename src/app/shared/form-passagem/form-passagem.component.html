@@ -52,7 +52,11 @@
           matPrefix="flight_takeoff"
           [estadoCtrl]="formPassagemService.origem"
         ></app-dropdown-estado>
-        <button class="sync-alt-button" mat-icon-button>
+        <button
+          mat-icon-button
+          class="sync-alt-button"
+          (click)="formPassagemService.trocarOrigemDestino()"
+        >
           <mat-icon>sync_alt</mat-icon>
         </button>
         <app-dropdown-estado
@@ -76,7 +80,14 @@
           <mat-datepicker #return></mat-datepicker>
         </mat-form-field>
       </div>
-      <button class="search-button" mat-flat-button color="primary">BUSCAR</button>
+      <button
+        mat-flat-button
+        class="search-button"
+        color="primary"
+        (click)="buscar()"
+      >
+        BUSCAR
+      </button>
   </div>
   </form>
 </app-card>

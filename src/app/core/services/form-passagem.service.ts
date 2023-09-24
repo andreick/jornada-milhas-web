@@ -8,9 +8,7 @@ import { ModalComponent } from 'src/app/shared/modal/modal.component';
 import { Estado } from '../models/estado';
 import { DadosModal } from 'src/app/shared/modal/dados-modal';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FormPassagemService {
 
   readonly formPassagem;
@@ -50,6 +48,13 @@ export class FormPassagemService {
         if (!descricao) return passageiro;
         return descricao += `${indice < lista.length - 1 ? ',' : ' e'} ${passageiro}`;
       }, '');
+  }
+
+  trocarOrigemDestino(): void {
+    this.formPassagem.patchValue({
+      origem: this.destino.value,
+      destino: this.origem.value
+    })
   }
 
   openDialog(): void {
