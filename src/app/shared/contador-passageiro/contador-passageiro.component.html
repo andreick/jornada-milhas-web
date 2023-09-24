@@ -2,8 +2,8 @@
   <p><strong>{{ titulo }}</strong></p>
   <p>{{ subtitulo }}</p>
   <div class="contador-container">
-    <app-button-counter operation="decrement"></app-button-counter>
-    <p><span>1</span></p>
-    <app-button-counter operation="increment"></app-button-counter>
+    <app-button-counter operation="decrement" (click)="decrementar()"></app-button-counter>
+    <p><span>{{ contador }}</span></p>
+    <app-button-counter operation="increment" (click)="incrementar()"></app-button-counter>
   </div>
 </div>

@@ -5,14 +5,17 @@
       <app-contador-passageiro
         titulo="Adultos"
         subtitulo="(Acima de 12 anos)"
+        [formControl]="formPassagemService.adultos"
       ></app-contador-passageiro>
       <app-contador-passageiro
         titulo="Crianças"
         subtitulo="(Entre 2 e 11 anos)"
+        [formControl]="formPassagemService.criancas"
       ></app-contador-passageiro>
       <app-contador-passageiro
         titulo="Bebês"
         subtitulo="(Até 2 anos)"
+        [formControl]="formPassagemService.bebes"
       ></app-contador-passageiro>
     </div>
     <div class="category-selection">
