@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 
-import { FormPassagemService } from 'src/app/core/services/form-passagem.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
+import { DadosModal } from './dados-modal';
 
 @Component({
   selector: 'app-modal',
@@ -10,10 +12,19 @@ import { FormPassagemService } from 'src/app/core/services/form-passagem.service
 export class ModalComponent implements OnInit {
 
   constructor(
-    public formPassagemService: FormPassagemService,
+    @Inject(MAT_DIALOG_DATA) public dadosModal: DadosModal,
+    private dialogRef: MatDialogRef<ModalComponent>,
   ) { }
 
   ngOnInit(): void {
+  }
+
+  selecionarCategoria(categoria: 'Econômica' | 'Executiva'): void {
+    this.dadosModal.categoria = categoria;
+  }
+
+  cancelar(): void {
+    this.dialogRef.close();
   }
 
 }

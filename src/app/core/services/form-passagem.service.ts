@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
 
 import { Estado } from '../models/estado';
+import { DadosModal } from 'src/app/shared/modal/dados-modal';
 
 @Injectable({
   providedIn: 'root'
@@ -13,25 +14,25 @@ import { Estado } from '../models/estado';
 export class FormPassagemService {
 
   readonly formPassagem;
-  readonly somenteIda: FormControl<boolean | null>;
-  readonly origem: FormControl<string | Estado | null>;
-  readonly destino: FormControl<string | Estado | null>;
-  readonly categoria: FormControl<'Econômica' | 'Executiva' | null>;
-  readonly adultos: FormControl<number | null>;
-  readonly criancas: FormControl<number | null>;
-  readonly bebes: FormControl<number | null>;
+  readonly somenteIda;
+  readonly origem;
+  readonly destino;
+  readonly categoria;
+  readonly adultos;
+  readonly criancas;
+  readonly bebes;
 
   constructor(
     private dialog: MatDialog,
   ) {
     this.formPassagem = new FormGroup({
-      somenteIda: this.somenteIda = new FormControl(false),
-      origem: this.origem = new FormControl(''),
-      destino: this.destino = new FormControl(''),
-      categoria: this.categoria = new FormControl('Executiva'),
-      adultos: this.adultos = new FormControl(1),
-      criancas: this.criancas = new FormControl(0),
-      bebes: this.bebes = new FormControl(0),
+      somenteIda: this.somenteIda = new FormControl<boolean>(false),
+      origem: this.origem = new FormControl<string | Estado>(''),
+      destino: this.destino = new FormControl<string | Estado>(''),
+      categoria: this.categoria = new FormControl<'Econômica' | 'Executiva'>('Executiva'),
+      adultos: this.adultos = new FormControl<number>(1),
+      criancas: this.criancas = new FormControl<number>(0),
+      bebes: this.bebes = new FormControl<number>(0),
     });
   }
 
@@ -52,11 +53,24 @@ export class FormPassagemService {
   }
 
   openDialog(): void {
-    this.dialog.open(ModalComponent, { width: '50%' });
-  }
-
-  categoriaSelected(categoria: 'Econômica' | 'Executiva'): void {
-    this.categoria.setValue(categoria);
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '50%',
+      data: {
+        categoria: this.categoria.value,
+        adultos: this.adultos.value,
+        criancas: this.criancas.value,
+        bebes: this.bebes.value,
+      } as DadosModal
+    });
+    dialogRef.afterClosed().subscribe((dadosModal: DadosModal | undefined) => {
+      if (!dadosModal) return;
+      this.formPassagem.patchValue({
+        categoria: dadosModal.categoria,
+        adultos: dadosModal.adultos,
+        criancas: dadosModal.criancas,
+        bebes: dadosModal.bebes,
+      });
+    })
   }
 
 }

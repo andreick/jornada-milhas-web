@@ -5,25 +5,25 @@
       <app-contador-passageiro
         titulo="Adultos"
         subtitulo="(Acima de 12 anos)"
-        [formControl]="formPassagemService.adultos"
+        [(ngModel)]="dadosModal.adultos"
       ></app-contador-passageiro>
       <app-contador-passageiro
         titulo="Crianças"
         subtitulo="(Entre 2 e 11 anos)"
-        [formControl]="formPassagemService.criancas"
+        [(ngModel)]="dadosModal.criancas"
       ></app-contador-passageiro>
       <app-contador-passageiro
         titulo="Bebês"
         subtitulo="(Até 2 anos)"
-        [formControl]="formPassagemService.bebes"
+        [(ngModel)]="dadosModal.bebes"
       ></app-contador-passageiro>
     </div>
     <div class="category-selection">
       <p><strong>Categoria</strong></p>
       <mat-chip-list aria-label="Seleção de categoria">
         <mat-chip
-          [selected]="formPassagemService.categoria.value === 'Econômica'"
-          (click)="formPassagemService.categoriaSelected('Econômica')"
+          [selected]="dadosModal.categoria === 'Econômica'"
+          (click)="selecionarCategoria('Econômica')"
         >
           <div class="icon-label-container">
             <mat-icon class="icon-sm">check</mat-icon>
@@ -31,8 +31,8 @@
           </div>
         </mat-chip>
         <mat-chip
-          [selected]="formPassagemService.categoria.value === 'Executiva'"
-          (click)="formPassagemService.categoriaSelected('Executiva')"
+          [selected]="dadosModal.categoria === 'Executiva'"
+          (click)="selecionarCategoria('Executiva')"
         >
           <div class="icon-label-container">
             <mat-icon class="icon-sm">check</mat-icon>
@@ -43,7 +43,7 @@
     </div>
   </div>
   <div class="modal-actions">
-    <button mat-flat-button class="cancel-button">Cancelar</button>
-    <button mat-flat-button color="primary">Aplicar</button>
+    <button mat-flat-button class="cancel-button" (click)="cancelar()">Cancelar</button>
+    <button mat-flat-button color="primary" [mat-dialog-close]="dadosModal">Aplicar</button>
   </div>
 </section>
