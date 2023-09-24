@@ -24,7 +24,6 @@ import { CardPromocaoComponent } from './card-promocao/card-promocao.component';
 import { CardDepoimentoComponent } from './card-depoimento/card-depoimento.component';
 import { FormPassagemComponent } from './form-passagem/form-passagem.component';
 import { ModalComponent } from './modal/modal.component';
-import { ButtonCounterComponent } from './button-counter/button-counter.component';
 import { DropdownEstadoComponent } from './dropdown-estado/dropdown-estado.component';
 import { ContadorPassageiroComponent } from './contador-passageiro/contador-passageiro.component';
 
@@ -39,7 +38,6 @@ import { ContadorPassageiroComponent } from './contador-passageiro/contador-pass
     CardDepoimentoComponent,
     FormPassagemComponent,
     ModalComponent,
-    ButtonCounterComponent,
     DropdownEstadoComponent,
     ContadorPassageiroComponent,
   ],

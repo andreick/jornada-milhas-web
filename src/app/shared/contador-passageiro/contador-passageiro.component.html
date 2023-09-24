@@ -2,8 +2,12 @@
   <p><strong>{{ titulo }}</strong></p>
   <p>{{ subtitulo }}</p>
   <div class="contador-container">
-    <app-button-counter operation="decrement" (click)="decrementar()"></app-button-counter>
+    <button mat-mini-fab class="decremento" (click)="decrementar()">
+      <img src="assets/icones/do_not_disturb_on.png" alt="Operador de subtração">
+    </button>
     <p><span>{{ contador }}</span></p>
-    <app-button-counter operation="increment" (click)="incrementar()"></app-button-counter>
+    <button mat-mini-fab class="incremento" (click)="incrementar()">
+      <img src="assets/icones/add_circle.png" alt="Operador de adição">
+    </button>
   </div>
 </div>
